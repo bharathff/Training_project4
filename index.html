@@ -11,7 +11,7 @@
 <body>
     <h2>Login Page</h2><br>
     <div class="login">
-        <form id="login">
+        <form method="get" action="todo.html" id="login">
             <label><b>User Name</b>
             </label>
             <input type="text" name="name" id="name" placeholder="Username" autocomplete="off" required>
@@ -20,18 +20,19 @@
             </label>
             <input type="Password" name="Password" id="Password" placeholder="Password" autocomplete="off" required>
             <br><br>
-            <input type="submit" name="log" class="log" id="enter" value="Log In Here">
+            <input type="submit" name="log" onclick="todo()" class="log" id="enter" value="Log In Here">
         </form>
         <br>
-        <input type="button" id="signup" class="log" value="signup">
+        <input type="button" id="signup" onclick="signup()" class="log"  value="signup">
 
         <script>
-            document.getElementById("signup").addEventListener("click", function () {
+            
+            function signup()
+            {
                 window.location.href = "signup.html";
-            });
-            document.getElementById("enter").addEventListener("click", function () {
-                window.location.href = "todo.html";
-            });
+
+            }
+
         </script>
 </body>
 
